@@ -2,6 +2,7 @@
 !/.gitattributes
 !/.projen/tasks.json
 !/.projen/deps.json
+!/.github/workflows/auto-approve.yml
 !/.github/workflows/stale.yml
 !/package.json
 !/LICENSE
@@ -47,5 +48,12 @@ junit.xml
 .jsii
 tsconfig.json
 !/API.md
+!/.gitpod.yml
+!/cdk.json
+cdk.out
+cdk.context.json
+yarn-error.log
+dependabot.yml
 !/.github/workflows/release.yml
 !/.github/workflows/upgrade-main.yml
+!/src/default-handler-function.ts

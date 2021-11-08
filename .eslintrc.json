@@ -145,7 +145,8 @@
       {
         "devDependencies": [
           "**/test/**",
-          "**/build-tools/**"
+          "**/build-tools/**",
+          "src/default-handler.lambda.ts"
         ],
         "optionalDependencies": false,
         "peerDependencies": true
