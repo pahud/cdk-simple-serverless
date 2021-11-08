@@ -30,6 +30,10 @@ const project = new AwsCdkConstructLibrary({
     secret: 'GITHUB_TOKEN',
     allowedUsernames: ['pahud'],
   },
+  publishToPypi: {
+    distName: 'cdk-simple-serverless',
+    module: 'cdk_simple_serverless',
+  },
 });
 
 const gitpodPrebuild = project.addTask('gitpod:prebuild', {
