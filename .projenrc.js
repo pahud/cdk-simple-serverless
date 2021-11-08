@@ -8,6 +8,7 @@ const project = new AwsCdkConstructLibrary({
   cdkVersion: '1.95.2',
   defaultReleaseBranch: 'main',
   name: 'cdk-simple-serverless',
+  description: 'CDK Constructs for Serverless Demo',
   repositoryUrl: 'https://github.com/pahud/cdk-simple-serverless.git',
   cdkDependencies: [
     '@aws-cdk/aws-lambda',

@@ -1,5 +1,6 @@
 {
   "name": "cdk-simple-serverless",
+  "description": "CDK Constructs for Serverless Demo",
   "repository": {
     "type": "git",
     "url": "https://github.com/pahud/cdk-simple-serverless.git"
