@@ -64,7 +64,7 @@ gitpod.addCustomTask({
 
 gitpod.addVscodeExtensions(
   // 'dbaeumer.vscode-eslint',
-  'https://github.com/microsoft/vscode-eslint/releases/download/release%2F2.2.20-Insider/vscode-eslint-2.2.0.vsix',
+  'https://github.com/neilkuan/vscode-eslint/releases/download/release%2F2.2.2/vscode-eslint-2.2.2.vsix',
   'ms-azuretools.vscode-docker',
 );
 
