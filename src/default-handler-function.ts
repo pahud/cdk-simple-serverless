@@ -10,16 +10,16 @@ export interface DefaultHandlerFunctionProps extends lambda.FunctionOptions {
 }
 
 /**
- * An AWS Lambda function which executes default-handler.
+ * An AWS Lambda function which executes src/default-handler.
  */
 export class DefaultHandlerFunction extends lambda.Function {
   constructor(scope: Construct, id: string, props?: DefaultHandlerFunctionProps) {
     super(scope, id, {
-      description: 'default-handler.lambda.ts',
+      description: 'src/default-handler.lambda.ts',
       ...props,
       runtime: lambda.Runtime.NODEJS_14_X,
       handler: 'index.handler',
-      code: lambda.Code.fromAsset(path.join(__dirname, 'default-handler.lambda.bundle')),
+      code: lambda.Code.fromAsset(path.join(__dirname, '../assets/default-handler.lambda')),
     });
   }
 }

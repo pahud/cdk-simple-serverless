@@ -42,28 +42,28 @@
     },
     "bundle": {
       "name": "bundle",
-      "description": "Bundle assets",
+      "description": "Prepare assets",
       "steps": [
         {
-          "spawn": "bundle:default-handler"
+          "spawn": "bundle:default-handler.lambda"
         }
       ]
     },
-    "bundle:default-handler": {
-      "name": "bundle:default-handler",
+    "bundle:default-handler.lambda": {
+      "name": "bundle:default-handler.lambda",
       "description": "Create a JavaScript bundle from src/default-handler.lambda.ts",
       "steps": [
         {
-          "exec": "esbuild --bundle src/default-handler.lambda.ts --target=\"node14\" --platform=\"node\" --outfile=\"lib/default-handler.lambda.bundle/index.js\" --external:aws-sdk --sourcemap"
+          "exec": "esbuild --bundle src/default-handler.lambda.ts --target=\"node14\" --platform=\"node\" --outfile=\"assets/default-handler.lambda/index.js\" --external:aws-sdk"
         }
       ]
     },
-    "bundle:default-handler:watch": {
-      "name": "bundle:default-handler:watch",
+    "bundle:default-handler.lambda:watch": {
+      "name": "bundle:default-handler.lambda:watch",
       "description": "Continuously update the JavaScript bundle from src/default-handler.lambda.ts",
       "steps": [
         {
-          "exec": "esbuild --bundle src/default-handler.lambda.ts --target=\"node14\" --platform=\"node\" --outfile=\"lib/default-handler.lambda.bundle/index.js\" --external:aws-sdk --sourcemap --watch"
+          "exec": "esbuild --bundle src/default-handler.lambda.ts --target=\"node14\" --platform=\"node\" --outfile=\"assets/default-handler.lambda/index.js\" --external:aws-sdk --watch"
         }
       ]
     },

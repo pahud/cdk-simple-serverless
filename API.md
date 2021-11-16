@@ -4,7 +4,7 @@
 
 ### DefaultHandlerFunction <a name="cdk-simple-serverless.DefaultHandlerFunction"></a>
 
-An AWS Lambda function which executes default-handler.
+An AWS Lambda function which executes src/default-handler.
 
 #### Initializers <a name="cdk-simple-serverless.DefaultHandlerFunction.Initializer"></a>
 
