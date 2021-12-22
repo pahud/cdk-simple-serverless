@@ -10,6 +10,20 @@ const project = new awscdk.AwsCdkConstructLibrary({
   name: 'cdk-simple-serverless',
   description: 'CDK Constructs for Serverless Demo',
   repositoryUrl: 'https://github.com/pahud/cdk-simple-serverless.git',
+  defaultReleaseBranch: 'main',
+  cdkVersion: '2.1.0',
+  /**
+   * we default release the main branch(cdkv2) with major version 2.
+   */
+  majorVersion: 2,
+  defaultReleaseBranch: 'main',
+  /**
+    * we also release the cdkv1 branch with major version 1.
+    */
+  releaseBranches: {
+    cdkv1: { npmDistTag: 'cdkv1', majorVersion: 1 },
+  },
+  workflowNodeVersion: '14.17.0',
   devDeps: [
     'aws-cdk',
     'ts-node',
