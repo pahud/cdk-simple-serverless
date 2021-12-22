@@ -1,20 +1,15 @@
-const { AwsCdkConstructLibrary, DevEnvironmentDockerImage, Gitpod, JsonFile } = require('projen');
+const { awscdk, DevEnvironmentDockerImage, Gitpod, JsonFile } = require('projen');
 
 const AUTOMATION_TOKEN = 'PROJEN_GITHUB_TOKEN';
 
-const project = new AwsCdkConstructLibrary({
+const project = new awscdk.AwsCdkConstructLibrary({
   author: 'Pahud Hsieh',
   authorAddress: 'pahudnet@gmail.com',
-  cdkVersion: '1.95.2',
+  cdkVersion: '2.0.0',
   defaultReleaseBranch: 'main',
   name: 'cdk-simple-serverless',
   description: 'CDK Constructs for Serverless Demo',
   repositoryUrl: 'https://github.com/pahud/cdk-simple-serverless.git',
-  cdkDependencies: [
-    '@aws-cdk/aws-lambda',
-    '@aws-cdk/aws-apigateway',
-    '@aws-cdk/core',
-  ],
   devDeps: [
     'aws-cdk',
     'ts-node',

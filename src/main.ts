@@ -1,20 +1,22 @@
-import * as apigateway from '@aws-cdk/aws-apigateway';
-import * as lambda from '@aws-cdk/aws-lambda';
-import * as cdk from '@aws-cdk/core';
+import {
+  aws_apigateway as apigateway,
+  aws_lambda as lambda,
+} from 'aws-cdk-lib';
+import { Construct } from 'constructs';
 import { DefaultHandlerFunction, DefaultHandlerFunctionProps } from '.';
 
 export interface HelloFunctionProps extends DefaultHandlerFunctionProps {}
 
-export class HelloFunction extends cdk.Construct {
+export class HelloFunction extends Construct {
   readonly handler: lambda.Function;
-  constructor(scope: cdk.Construct, id: string, props: HelloFunctionProps = {}) {
+  constructor(scope: Construct, id: string, props: HelloFunctionProps = {}) {
     super(scope, id);
     this.handler = new DefaultHandlerFunction(this, 'DefaultFunc', props);
   }
 }
 
-export class HelloRestApiService extends cdk.Construct {
-  constructor(scope: cdk.Construct, id: string) {
+export class HelloRestApiService extends Construct {
+  constructor(scope: Construct, id: string) {
     super(scope, id);
 
     new apigateway.LambdaRestApi(this, 'API', {

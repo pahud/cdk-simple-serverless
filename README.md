@@ -8,6 +8,20 @@
 
 Tiny serverless constructs wih all optional construct properties to keep it as simple as possible for demo out of the box.
 
+# Install
+
+Use the npm dist tag to opt in CDKv1 or CDKv2:
+
+```sh
+// for CDKv2
+npm install cdk-simple-serverless
+or
+npm install cdk-simple-serverless@latest
+
+// for CDKv1
+npm install cdk-simple-serverless@cdkv1 
+```
+
 ## HelloFunction
 
 AWS Lambda function that returns `"Hello CDK!"` only.
