@@ -1,6 +1,4 @@
-import { SynthUtils } from '@aws-cdk/assert';
-import '@aws-cdk/assert/jest';
-import * as cdk from '@aws-cdk/core';
+import * as cdk from 'aws-cdk-lib';
 import { HelloFunction, HelloRestApiService } from '../lib';
 
 let app: cdk.App;
@@ -16,9 +14,10 @@ test('create a default hello function', () => {
   // WHEN
   new HelloFunction(stack, 'Func');
   // match snapshot
-  expect(SynthUtils.toCloudFormation(stack)).toMatchSnapshot();
+  const t = cdk.assertions.Template.fromStack(stack);
+  expect(t).toMatchSnapshot();
   // we should have a function
-  expect(stack).toHaveResource('AWS::Lambda::Function');
+  t.resourceCountIs('AWS::Lambda::Function', 1);
 });
 
 test('create a default api service', () => {
@@ -26,7 +25,8 @@ test('create a default api service', () => {
   // WHEN
   new HelloRestApiService(stack, 'Service');
   // match snapshot
-  expect(SynthUtils.toCloudFormation(stack)).toMatchSnapshot();
+  const t = cdk.assertions.Template.fromStack(stack);
+  expect(t).toMatchSnapshot();
   // we should have a api service
-  expect(stack).toHaveResource('AWS::ApiGateway::RestApi');
+  t.resourceCountIs('AWS::ApiGateway::RestApi', 1);
 });
