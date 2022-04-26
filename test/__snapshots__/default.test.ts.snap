@@ -381,6 +381,11 @@ Object {
           "S3Key": "57921259e61dc9cce215762ac31bda7eecf747b6865c3e2e246787b568543787.zip",
         },
         "Description": "src/default-handler.lambda.ts",
+        "Environment": Object {
+          "Variables": Object {
+            "AWS_NODEJS_CONNECTION_REUSE_ENABLED": "1",
+          },
+        },
         "Handler": "index.handler",
         "Role": Object {
           "Fn::GetAtt": Array [
@@ -476,6 +481,11 @@ Object {
           "S3Key": "57921259e61dc9cce215762ac31bda7eecf747b6865c3e2e246787b568543787.zip",
         },
         "Description": "src/default-handler.lambda.ts",
+        "Environment": Object {
+          "Variables": Object {
+            "AWS_NODEJS_CONNECTION_REUSE_ENABLED": "1",
+          },
+        },
         "Handler": "index.handler",
         "Role": Object {
           "Fn::GetAtt": Array [
